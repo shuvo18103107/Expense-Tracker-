@@ -22,10 +22,13 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
-
+  const onFormdataObjectHandler = (formobj) => {
+    expenses.push(formobj)
+    console.log(expenses);
+  }
   return (
     <div >
-      <NewExpense />
+      <NewExpense onFormdataObject={onFormdataObjectHandler} />
       <Expenses item={expenses} />
     </div>
 
